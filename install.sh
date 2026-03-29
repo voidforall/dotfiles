@@ -63,20 +63,7 @@ link "$DOTFILES_DIR/config/starship.toml" "$HOME/.config/starship.toml"
 link "$DOTFILES_DIR/config/gh/config.yml" "$HOME/.config/gh/config.yml"
 
 # ── Claude Code ────────────────────────────────────────────────────────────────
-link "$DOTFILES_DIR/claude/settings.json"                       "$HOME/.claude/settings.json"
-link "$DOTFILES_DIR/claude/rules/common/coding-style.md"        "$HOME/.claude/rules/common/coding-style.md"
-link "$DOTFILES_DIR/claude/rules/common/git-workflow.md"        "$HOME/.claude/rules/common/git-workflow.md"
-link "$DOTFILES_DIR/claude/rules/common/testing.md"             "$HOME/.claude/rules/common/testing.md"
-link "$DOTFILES_DIR/claude/rules/common/performance.md"         "$HOME/.claude/rules/common/performance.md"
-link "$DOTFILES_DIR/claude/rules/common/patterns.md"            "$HOME/.claude/rules/common/patterns.md"
-link "$DOTFILES_DIR/claude/rules/common/hooks.md"               "$HOME/.claude/rules/common/hooks.md"
-link "$DOTFILES_DIR/claude/rules/common/agents.md"              "$HOME/.claude/rules/common/agents.md"
-link "$DOTFILES_DIR/claude/rules/common/security.md"            "$HOME/.claude/rules/common/security.md"
-link "$DOTFILES_DIR/claude/rules/typescript/coding-style.md"    "$HOME/.claude/rules/typescript/coding-style.md"
-link "$DOTFILES_DIR/claude/rules/typescript/testing.md"         "$HOME/.claude/rules/typescript/testing.md"
-link "$DOTFILES_DIR/claude/rules/typescript/patterns.md"        "$HOME/.claude/rules/typescript/patterns.md"
-link "$DOTFILES_DIR/claude/rules/typescript/hooks.md"           "$HOME/.claude/rules/typescript/hooks.md"
-link "$DOTFILES_DIR/claude/rules/typescript/security.md"        "$HOME/.claude/rules/typescript/security.md"
+link "$DOTFILES_DIR/claude/settings.json" "$HOME/.claude/settings.json"
 
 # ── Claude Skills ──────────────────────────────────────────────────────────────
 link "$DOTFILES_DIR/claude/skills/leetcode-cpp/SKILL.md" "$HOME/.claude/skills/leetcode-cpp/SKILL.md"
