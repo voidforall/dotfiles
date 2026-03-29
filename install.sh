@@ -78,6 +78,9 @@ link "$DOTFILES_DIR/claude/rules/typescript/patterns.md"        "$HOME/.claude/r
 link "$DOTFILES_DIR/claude/rules/typescript/hooks.md"           "$HOME/.claude/rules/typescript/hooks.md"
 link "$DOTFILES_DIR/claude/rules/typescript/security.md"        "$HOME/.claude/rules/typescript/security.md"
 
+# ── Claude Skills ──────────────────────────────────────────────────────────────
+link "$DOTFILES_DIR/claude/skills/leetcode-cpp/SKILL.md" "$HOME/.claude/skills/leetcode-cpp/SKILL.md"
+
 echo ""
 echo -e "${GREEN}Done!${NC}"
 echo ""

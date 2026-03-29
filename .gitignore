@@ -4,6 +4,9 @@
 # Backup files created by install.sh
 *.bak
 
+# Claude skill eval/benchmark workspaces (auto-generated, not source)
+claude/skills/*-workspace/
+
 # Machine-local files (never commit)
 *.local
 .env
