@@ -1,0 +1,23 @@
+{
+  "skill_name": "learning-pr",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Hey, I'm fairly new to this codebase and my team just merged PR #47 yesterday — something about refactoring the auth middleware. I keep hearing people talk about it in standup but I don't really understand what changed or why. Can you walk me through it so I actually understand what's going on?",
+      "expected_output": "The skill should: (1) identify the PR via `gh pr view 47`, (2) present a TL;DR card, (3) explain the motivation and before-state of the auth middleware before showing any code, (4) map where auth middleware sits in the architecture, (5) walk through the diff in concept-chunks with annotations, (6) provide a code review anchored to the mental model built, and (7) synthesize the broader pattern (e.g., middleware chain, decorator pattern). Must pause interactively after each phase.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I've been working on a local branch called feature/payment-retry-logic for the past week and I'm about to open a PR. Before I do, can you help me understand how it looks from a reviewer's perspective? I want to make sure the PR tells a clear story and that I haven't missed anything obvious.",
+      "expected_output": "The skill should detect this is the author-review case and shift framing accordingly. Should: (1) use `git diff main...feature/payment-retry-logic` to get the diff, (2) produce a TL;DR card, (3) ask whether the motivation is clear in the PR description, (4) walk through the changes as a reviewer would encounter them cold, (5) flag areas a reviewer might question, (6) provide standard code review with emphasis on 'what would a reviewer ask?', and (7) suggest improvements to the PR description or commit structure if needed.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I'm doing a code review on https://github.com/anthropics/anthropic-sdk-python/pull/123 and honestly I don't have much context on how this SDK is structured. Can you help me actually learn what this PR is changing and why, so I can give a useful review instead of just approving blindly?",
+      "expected_output": "The skill should: (1) parse the GitHub PR URL and fetch it via `gh pr view`, (2) produce a TL;DR card for someone unfamiliar with the SDK, (3) explain the problem being solved (Phase 2) with extra context since the user is unfamiliar with the area, (4) map the relevant SDK architecture concisely (Phase 3), (5) walk through the diff in logical chunks with annotations calibrated for an outsider, (6) provide a review that helps the user formulate meaningful review comments, and (7) synthesize what the PR teaches about SDK design patterns.",
+      "files": []
+    }
+  ]
+}
