@@ -1,0 +1,16 @@
+[user]
+	name = Lin Yuan
+	email = voidforall@gmail.com
+
+[credential]
+	# macOS keychain — safer than 'store' (plain-text .git-credentials)
+	helper = osxkeychain
+
+[core]
+	excludesfile = ~/.config/git/ignore
+
+[pull]
+	rebase = false
+
+[init]
+	defaultBranch = main

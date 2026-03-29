@@ -1,0 +1,26 @@
+# Claude Code local settings
+**/.claude/settings.local.json
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+
+# Secrets / local env
+.env
+.env.local
+.env.*.local
+
+# Build outputs
+node_modules/
+dist/
+build/
+*.pyc
+__pycache__/

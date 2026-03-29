@@ -1,0 +1,9 @@
+# LLVM (Homebrew)
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
+
+# Machine-local overrides (not tracked in git)
+if [ -f "$HOME/.zprofile.local" ]; then
+    source "$HOME/.zprofile.local"
+fi
