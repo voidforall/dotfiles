@@ -62,6 +62,26 @@ if [ -f "$HOME/.openclaw/completions/openclaw.zsh" ]; then
     source "$HOME/.openclaw/completions/openclaw.zsh"
 fi
 
+# zsh-syntax-highlighting (Catppuccin Macchiato)
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+ZSH_HIGHLIGHT_STYLES[command]='fg=#a6da95'           # Green  - valid commands
+ZSH_HIGHLIGHT_STYLES[alias]='fg=#a6da95'             # Green  - aliases
+ZSH_HIGHLIGHT_STYLES[builtin]='fg=#8aadf4'           # Blue   - builtins
+ZSH_HIGHLIGHT_STYLES[function]='fg=#8aadf4'          # Blue   - functions
+ZSH_HIGHLIGHT_STYLES[path]='fg=#cad3f5,underline'    # Text   - paths
+ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=#ed8796'     # Red    - unknown/errors
+ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=#eed49f'  # Yellow - strings
+ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=#eed49f'  # Yellow - strings
+ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument]='fg=#f5a97f'  # Peach  - $'...'
+ZSH_HIGHLIGHT_STYLES[comment]='fg=#6e738d'           # Overlay0 - comments
+ZSH_HIGHLIGHT_STYLES[option]='fg=#c6a0f6'            # Mauve  - flags/options
+ZSH_HIGHLIGHT_STYLES[redirection]='fg=#91d7e3'       # Sky    - redirects
+ZSH_HIGHLIGHT_STYLES[commandseparator]='fg=#f5bde6'  # Pink   - ; | &&
+
+# zsh-autosuggestions
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#6e738d'         # Overlay0 - subtle gray
+
 # Starship prompt
 eval "$(starship init zsh)"
 
