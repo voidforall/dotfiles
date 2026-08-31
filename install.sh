@@ -66,6 +66,10 @@ link "$DOTFILES_DIR/config/gh/config.yml" "$HOME/.config/gh/config.yml"
 link "$DOTFILES_DIR/claude/settings.json" "$HOME/.claude/settings.json"
 link "$DOTFILES_DIR/claude/statusline-command.sh" "$HOME/.claude/statusline-command.sh"
 
+# ── Agent instructions (single source, shared across tools) ─────────────────────
+link "$DOTFILES_DIR/claude/AGENTS.md" "$HOME/.claude/CLAUDE.md"
+link "$DOTFILES_DIR/claude/AGENTS.md" "$HOME/.codex/AGENTS.md"
+
 # ── Claude Skills ──────────────────────────────────────────────────────────────
 link "$DOTFILES_DIR/claude/skills/leetcode-cpp/SKILL.md" "$HOME/.claude/skills/leetcode-cpp/SKILL.md"
 
