@@ -63,15 +63,15 @@ link "$DOTFILES_DIR/config/starship.toml" "$HOME/.config/starship.toml"
 link "$DOTFILES_DIR/config/gh/config.yml" "$HOME/.config/gh/config.yml"
 
 # ── Claude Code ────────────────────────────────────────────────────────────────
-link "$DOTFILES_DIR/claude/settings.json" "$HOME/.claude/settings.json"
-link "$DOTFILES_DIR/claude/statusline-command.sh" "$HOME/.claude/statusline-command.sh"
+link "$DOTFILES_DIR/home/.claude/settings.json" "$HOME/.claude/settings.json"
+link "$DOTFILES_DIR/home/.claude/statusline-command.sh" "$HOME/.claude/statusline-command.sh"
 
 # ── Agent instructions (single source, shared across tools) ─────────────────────
-link "$DOTFILES_DIR/claude/AGENTS.md" "$HOME/.claude/CLAUDE.md"
-link "$DOTFILES_DIR/claude/AGENTS.md" "$HOME/.codex/AGENTS.md"
+link "$DOTFILES_DIR/home/AGENTS.md" "$HOME/.claude/CLAUDE.md"
+link "$DOTFILES_DIR/home/AGENTS.md" "$HOME/.codex/AGENTS.md"
 
 # ── Claude Skills ──────────────────────────────────────────────────────────────
-link "$DOTFILES_DIR/claude/skills/leetcode-cpp/SKILL.md" "$HOME/.claude/skills/leetcode-cpp/SKILL.md"
+link "$DOTFILES_DIR/home/.claude/skills/leetcode-cpp/SKILL.md" "$HOME/.claude/skills/leetcode-cpp/SKILL.md"
 
 echo ""
 echo -e "${GREEN}Done!${NC}"
