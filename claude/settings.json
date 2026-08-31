@@ -1,8 +1,12 @@
 {
-  "model": "sonnet[1m]",
+  "env": {},
+  "permissions": {
+    "defaultMode": "auto"
+  },
+  "model": "sonnet",
   "statusLine": {
     "type": "command",
-    "command": "input=$(cat); cwd=$(echo \"$input\" | jq -r '.workspace.current_dir' | sed \"s|$HOME|~|g\"); model=$(echo \"$input\" | jq -r '.model.display_name'); time=$(date +%H:%M); remaining=$(echo \"$input\" | jq -r '.context_window.remaining_percentage // empty'); transcript=$(echo \"$input\" | jq -r '.transcript_path'); todo_count=$([ -f \"$transcript\" ] && grep -c '\"type\":\"todo\"' \"$transcript\" 2>/dev/null || echo 0); cd \"$(echo \"$input\" | jq -r '.workspace.current_dir')\" 2>/dev/null; branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo ''); dirty=''; [ -n \"$branch\" ] && [ -n \"$(git status --porcelain 2>/dev/null)\" ] && dirty='✗'; AR='\\033[1;32m'; CY='\\033[0;36m'; BL='\\033[1;34m'; RD='\\033[0;31m'; YL='\\033[0;33m'; MG='\\033[0;35m'; DM='\\033[2;37m'; RS='\\033[0m'; printf \"${AR}➜${RS}  ${CY}${cwd}${RS}\"; [ -n \"$branch\" ] && printf \"  ${BL}git:(${RD}${branch}${BL})${YL}${dirty}${RS}\"; [ -n \"$remaining\" ] && printf \"  ${MG}ctx:${remaining}%%${RS}\"; printf \"  ${DM}${model}${RS}  ${YL}${time}${RS}\"; [ \"$todo_count\" -gt 0 ] && printf \"  ${CY}todos:${todo_count}${RS}\"; echo"
+    "command": "bash ~/.claude/statusline-command.sh"
   },
   "enabledPlugins": {
     "github@claude-plugins-official": true,
@@ -11,7 +15,10 @@
     "clangd-lsp@claude-plugins-official": true,
     "skill-creator@claude-plugins-official": true,
     "claude-md-management@claude-plugins-official": true,
-    "cli-anything@cli-anything": true
+    "cli-anything@cli-anything": true,
+    "caveman@caveman": true,
+    "last30days@last30days-skill": true,
+    "diagram-design@diagram-design": true
   },
   "extraKnownMarketplaces": {
     "cli-anything": {
@@ -19,8 +26,33 @@
         "source": "github",
         "repo": "HKUDS/CLI-Anything"
       }
+    },
+    "caveman": {
+      "source": {
+        "source": "github",
+        "repo": "JuliusBrussee/caveman"
+      }
+    },
+    "last30days-skill": {
+      "source": {
+        "source": "github",
+        "repo": "mvanhorn/last30days-skill"
+      }
+    },
+    "diagram-design": {
+      "source": {
+        "source": "github",
+        "repo": "cathrynlavery/diagram-design"
+      }
     }
   },
-  "voiceEnabled": true,
-  "skipDangerousModePermissionPrompt": true
+  "tui": "fullscreen",
+  "voice": {
+    "enabled": true,
+    "mode": "hold"
+  },
+  "skipDangerousModePermissionPrompt": true,
+  "agentPushNotifEnabled": true,
+  "skipAutoPermissionPrompt": true,
+  "voiceEnabled": true
 }

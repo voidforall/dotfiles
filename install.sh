@@ -64,6 +64,7 @@ link "$DOTFILES_DIR/config/gh/config.yml" "$HOME/.config/gh/config.yml"
 
 # ── Claude Code ────────────────────────────────────────────────────────────────
 link "$DOTFILES_DIR/claude/settings.json" "$HOME/.claude/settings.json"
+link "$DOTFILES_DIR/claude/statusline-command.sh" "$HOME/.claude/statusline-command.sh"
 
 # ── Claude Skills ──────────────────────────────────────────────────────────────
 link "$DOTFILES_DIR/claude/skills/leetcode-cpp/SKILL.md" "$HOME/.claude/skills/leetcode-cpp/SKILL.md"
