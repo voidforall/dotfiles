@@ -62,6 +62,10 @@ link "$DOTFILES_DIR/git/gitignore_global" "$HOME/.config/git/ignore"
 link "$DOTFILES_DIR/config/starship.toml" "$HOME/.config/starship.toml"
 link "$DOTFILES_DIR/config/gh/config.yml" "$HOME/.config/gh/config.yml"
 
+# ── Neovim ─────────────────────────────────────────────────────────────────────
+# Whole directory, so lazy.nvim writes lazy-lock.json straight back into the repo
+link "$DOTFILES_DIR/home/.config/nvim" "$HOME/.config/nvim"
+
 # ── Claude Code ────────────────────────────────────────────────────────────────
 link "$DOTFILES_DIR/home/.claude/settings.json" "$HOME/.claude/settings.json"
 link "$DOTFILES_DIR/home/.claude/statusline-command.sh" "$HOME/.claude/statusline-command.sh"

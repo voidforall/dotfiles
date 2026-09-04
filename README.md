@@ -17,14 +17,45 @@ dotfiles/
 │   └── gitignore_global    # ~/.config/git/ignore
 ├── config/
 │   ├── starship.toml       # ~/.config/starship.toml
-│   └── gh/
-│       └── config.yml      # ~/.config/gh/config.yml
-└── claude/
-    ├── settings.json       # ~/.claude/settings.json
-    └── rules/
-        ├── common/         # Language-agnostic rules
-        └── typescript/     # TS/JS-specific rules
+│   ├── *.itermcolors       # iTerm2 colour schemes (imported by hand)
+│   └── gh/config.yml       # ~/.config/gh/config.yml
+└── home/                   # mirrors $HOME one-to-one
+    ├── AGENTS.md           # ~/.claude/CLAUDE.md + ~/.codex/AGENTS.md
+    ├── .claude/
+    │   ├── settings.json
+    │   ├── statusline-command.sh
+    │   └── skills/
+    └── .config/nvim/       # ~/.config/nvim  (whole dir symlinked)
+        ├── init.lua
+        ├── lazy-lock.json  # pinned plugin commits
+        └── lua/
+            ├── vim_config.lua   # editor options
+            ├── keys.lua         # keymaps
+            ├── plugin.lua       # lazy.nvim bootstrap
+            └── plugins/         # one file per plugin group
 ```
+
+## Neovim
+
+Config adapted from [kunchenguid/dotfiles](https://github.com/kunchenguid/dotfiles).
+Leader is `<Space>`; plugins are managed by [lazy.nvim](https://github.com/folke/lazy.nvim)
+and pinned in `lazy-lock.json`.
+
+| Key | Action |
+|---|---|
+| `<leader>f` | Find files (Snacks picker) |
+| `<leader>s` | Grep text |
+| `<leader>b` | Buffers |
+| `<leader>e` | File browser (oil.nvim) |
+| `<leader>g` | Neogit |
+| `gd` | Goto definition |
+| `<Esc>` (normal) | Save the buffer |
+| `<C-a>` | Select all |
+
+The whole `nvim/` directory is symlinked, so lazy.nvim writes `lazy-lock.json`
+straight back into this repo — commit it to pin plugin versions across machines.
+After pulling on a new machine, run `nvim --headless "+Lazy! restore" +qa` to
+check plugins out at the pinned commits.
 
 ## Install
 
