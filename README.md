@@ -38,6 +38,15 @@ dotfiles/
 ## Neovim
 
 Config adapted from [kunchenguid/dotfiles](https://github.com/kunchenguid/dotfiles).
+
+Requires `ripgrep` and `fd` on `$PATH` — the Snacks pickers shell out to them,
+so without `rg` the `<leader>s` grep fails only when you press the key:
+
+```bash
+brew install neovim ripgrep fd
+```
+
+`install.sh` warns if any of the three are missing.
 Leader is `<Space>`; plugins are managed by [lazy.nvim](https://github.com/folke/lazy.nvim)
 and pinned in `lazy-lock.json`.
 

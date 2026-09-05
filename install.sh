@@ -77,6 +77,20 @@ link "$DOTFILES_DIR/home/AGENTS.md" "$HOME/.codex/AGENTS.md"
 # ── Claude Skills ──────────────────────────────────────────────────────────────
 link "$DOTFILES_DIR/home/.claude/skills/leetcode-cpp/SKILL.md" "$HOME/.claude/skills/leetcode-cpp/SKILL.md"
 
+# ── Dependency check ───────────────────────────────────────────────────────────
+# Warn only. Snacks' pickers shell out to these; without them <leader>s and
+# <leader>f fail at the point of use rather than at install time.
+missing=()
+for dep in nvim rg fd; do
+    command -v "$dep" >/dev/null 2>&1 || missing+=("$dep")
+done
+
+if (( ${#missing[@]} > 0 )); then
+    echo ""
+    error "Missing commands: ${missing[*]}"
+    echo "        brew install neovim ripgrep fd"
+fi
+
 echo ""
 echo -e "${GREEN}Done!${NC}"
 echo ""
