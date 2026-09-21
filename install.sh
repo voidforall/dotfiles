@@ -65,6 +65,9 @@ link "$DOTFILES_DIR/config/gh/config.yml" "$HOME/.config/gh/config.yml"
 # ── WezTerm ─────────────────────────────────────────────────────────────────────────
 link "$DOTFILES_DIR/home/.config/wezterm" "$HOME/.config/wezterm"
 
+# ── herdr ──────────────────────────────────────────────────────────────────────
+link "$DOTFILES_DIR/home/.config/herdr" "$HOME/.config/herdr"
+
 # ── Neovim ─────────────────────────────────────────────────────────────────────
 # Whole directory, so lazy.nvim writes lazy-lock.json straight back into the repo
 link "$DOTFILES_DIR/home/.config/nvim" "$HOME/.config/nvim"
@@ -99,6 +102,12 @@ if ! command -v wezterm >/dev/null 2>&1 \
     echo ""
     error "Missing command: wezterm"
     echo "        brew install --cask wezterm font-hack-nerd-font"
+fi
+
+if ! command -v herdr >/dev/null 2>&1; then
+    echo ""
+    error "Missing command: herdr"
+    echo "        brew install herdr"
 fi
 
 echo ""
