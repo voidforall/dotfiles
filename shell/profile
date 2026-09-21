@@ -1,2 +1,4 @@
 # Rust / cargo
 [ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
+
+. "$HOME/.local/uv-0.11.33/bin/env"
