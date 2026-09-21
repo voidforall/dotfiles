@@ -1,6 +1,6 @@
 # dotfiles
 
-Personal dotfiles for macOS — shell, git, starship, GitHub CLI, and Claude Code.
+Personal dotfiles for macOS — shell, git, terminal, editor, GitHub CLI, and Claude Code.
 
 ## Structure
 
@@ -25,14 +25,32 @@ dotfiles/
     │   ├── settings.json
     │   ├── statusline-command.sh
     │   └── skills/
-    └── .config/nvim/       # ~/.config/nvim  (whole dir symlinked)
-        ├── init.lua
-        ├── lazy-lock.json  # pinned plugin commits
-        └── lua/
-            ├── vim_config.lua   # editor options
-            ├── keys.lua         # keymaps
-            ├── plugin.lua       # lazy.nvim bootstrap
-            └── plugins/         # one file per plugin group
+    └── .config/
+        ├── wezterm/        # ~/.config/wezterm (whole dir symlinked)
+        │   └── wezterm.lua  # appearance and focus behaviour
+        └── nvim/           # ~/.config/nvim (whole dir symlinked)
+            ├── init.lua
+            ├── lazy-lock.json  # pinned plugin commits
+            └── lua/
+                ├── vim_config.lua   # editor options
+                ├── keys.lua         # keymaps
+                ├── plugin.lua       # lazy.nvim bootstrap
+                └── plugins/         # one file per plugin group
+```
+
+## WezTerm
+
+The WezTerm configuration is adapted from
+[kunchenguid/dotfiles](https://github.com/kunchenguid/dotfiles). It uses the
+Rosé Pine Moon colour scheme, Hack Nerd Font at 15pt, a translucent blurred
+background, minimal resize-only window chrome, and hides the tab bar when only
+one tab is open. Unfocused windows are dimmed and made more transparent so the
+active terminal is easy to spot.
+
+Install WezTerm and its configured font with:
+
+```bash
+brew install --cask wezterm font-hack-nerd-font
 ```
 
 ## Neovim

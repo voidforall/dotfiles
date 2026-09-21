@@ -62,6 +62,9 @@ link "$DOTFILES_DIR/git/gitignore_global" "$HOME/.config/git/ignore"
 link "$DOTFILES_DIR/config/starship.toml" "$HOME/.config/starship.toml"
 link "$DOTFILES_DIR/config/gh/config.yml" "$HOME/.config/gh/config.yml"
 
+# ── WezTerm ─────────────────────────────────────────────────────────────────────────
+link "$DOTFILES_DIR/home/.config/wezterm" "$HOME/.config/wezterm"
+
 # ── Neovim ─────────────────────────────────────────────────────────────────────
 # Whole directory, so lazy.nvim writes lazy-lock.json straight back into the repo
 link "$DOTFILES_DIR/home/.config/nvim" "$HOME/.config/nvim"
@@ -89,6 +92,13 @@ if (( ${#missing[@]} > 0 )); then
     echo ""
     error "Missing commands: ${missing[*]}"
     echo "        brew install neovim ripgrep fd"
+fi
+
+if ! command -v wezterm >/dev/null 2>&1 \
+    && [[ ! -x "/Applications/WezTerm.app/Contents/MacOS/wezterm" ]]; then
+    echo ""
+    error "Missing command: wezterm"
+    echo "        brew install --cask wezterm font-hack-nerd-font"
 fi
 
 echo ""
