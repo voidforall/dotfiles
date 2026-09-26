@@ -84,6 +84,17 @@ straight back into this repo — commit it to pin plugin versions across machine
 After pulling on a new machine, run `nvim --headless "+Lazy! restore" +qa` to
 check plugins out at the pinned commits.
 
+## C++ toolchain
+
+Install the compilers and build tools with:
+
+```bash
+brew install llvm gcc cmake ninja
+```
+
+The shell uses Homebrew Clang by default when it is installed. GCC remains
+available through Homebrew's versioned `gcc-*` and `g++-*` commands.
+
 ## Install
 
 ```bash
